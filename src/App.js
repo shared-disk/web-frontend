@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+import Login from './Views/Login/Login'
+import Register from './Views/Register/Register'
+import Projects from './Views/Projects/Projects'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {localStorage.getItem('user_id') === null ?
+        <Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/">
+           <Login />
+          </Route>
+        </Switch> : 
+          <Switch>
+          <Route path="/register">
+            {/* <Register /> */}
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+        </Switch>}
+    </Router>
   );
 }
 
