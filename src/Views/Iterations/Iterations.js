@@ -33,7 +33,7 @@ export default function Iterations() {
                     <div style={{ margin: 10, borderColor: 'red', borderWidth: 1, borderStyle: 'double', borderRadius: 15, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
                         {Object.keys(iterations[item]).map(elem => {
                             return(
-                                <p style={{margin: 10, color: iterations[item][elem] === 0 ? 'gray' : 'black', fontSize: [0,2].includes(iterations[item][elem]) ? 15 : 20}}>{elem}: {iterations[item][elem]}</p>
+                                <p style={{margin: 10, color: iterations[item][elem] === 0 ? 'gray' : 'black', fontSize: [0,2].includes(iterations[item][elem]) ? 15 : 20}}>{elem}</p>
                             )
                         })}
                     </div>

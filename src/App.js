@@ -8,6 +8,8 @@ import Visits from './Views/Visits/Visits'
 import UsedSpace from './Views/UsedSpace/UsedSpace'
 import Iterations from './Views/Iterations/Iterations'
 import StageTime from './Views/StageTime/StageTime'
+import TaskTime from './Views/TaskTime/TaskTime'
+import Links from './Views/AvailableLinks/AvailableLinks'
 import './App.css';
 
 function App() {
@@ -23,6 +25,12 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
+          <Route path='/projects/:id/links'>
+            <Links />
+          </Route>
+          <Route path='/projects/:id/tasks_time'>
+            <TaskTime />
+          </Route>
           <Route path='/projects/:id/stages_time'>
             <StageTime />
           </Route>
