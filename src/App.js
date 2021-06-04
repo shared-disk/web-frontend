@@ -6,6 +6,8 @@ import Statistics from './Views/Statisctics/Statistics'
 import Changes from './Views/Changes/Changes'
 import Visits from './Views/Visits/Visits'
 import UsedSpace from './Views/UsedSpace/UsedSpace'
+import Iterations from './Views/Iterations/Iterations'
+import StageTime from './Views/StageTime/StageTime'
 import './App.css';
 
 function App() {
@@ -21,6 +23,12 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
+          <Route path='/projects/:id/stages_time'>
+            <StageTime />
+          </Route>
+          <Route path='/projects/:id/iterations'>
+            <Iterations />
+          </Route>
           <Route path='/projects/:id/used_space'>
             <UsedSpace />
           </Route>
