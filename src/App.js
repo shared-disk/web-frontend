@@ -4,6 +4,7 @@ import Register from './Views/Register/Register'
 import Projects from './Views/Projects/Projects'
 import Statistics from './Views/Statisctics/Statistics'
 import Changes from './Views/Changes/Changes'
+import Visits from './Views/Visits/Visits'
 import './App.css';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
+          <Route path='/projects/:id/visits'>
+            <Visits />
+          </Route>
           <Route path='/projects/:id/changes'>
             <Changes />
           </Route>
