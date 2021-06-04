@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './Projects.css'
 
 
@@ -29,11 +29,13 @@ export default function Projects() {
         <div style={{padding: 20}}>
             {projects.map(item => {
                 return(
-                    <div style={{borderColor: 'red', borderWidth: 1, borderStyle: 'double', width: 300, padding: 10}}>
-                        <h3>{item.name}</h3>
-                        <p>Менеджер: {item.manager}</p>
-                        <p>Клиент: {item.customer}</p>
-                    </div>
+                    <Link to={`/projects/${item.id}`}>
+                        <div style={{borderColor: 'red', borderWidth: 1, borderStyle: 'double', width: 300, padding: 10, color: 'black'}}>
+                            <h3 style={{marginTop: 5, marginBottom: 5, textDecoration: 'none'}}>{item.name}</h3>
+                            <p>Менеджер: {item.manager}</p>
+                            <p>Клиент: {item.customer}</p>
+                        </div>
+                    </Link>
                 )
             })}
         </div>

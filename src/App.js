@@ -2,6 +2,8 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './Views/Login/Login'
 import Register from './Views/Register/Register'
 import Projects from './Views/Projects/Projects'
+import Statistics from './Views/Statisctics/Statistics'
+import Changes from './Views/Changes/Changes'
 import './App.css';
 
 function App() {
@@ -17,8 +19,11 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
-          <Route path="/register">
-            {/* <Register /> */}
+          <Route path='/projects/:id/changes'>
+            <Changes />
+          </Route>
+          <Route path="/projects/:id">
+            <Statistics />
           </Route>
           <Route path="/projects">
             <Projects />
