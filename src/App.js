@@ -11,6 +11,7 @@ import StageTime from './Views/StageTime/StageTime'
 import TaskTime from './Views/TaskTime/TaskTime'
 import Links from './Views/AvailableLinks/AvailableLinks'
 import Report from './Views/Report/Report'
+import Add from './Views/Add/Add'
 import './App.css';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
+          <Route path='/add'>
+            <Add />
+          </Route>
           <Route path='/projects/:id/report'>
             <Report />
           </Route>

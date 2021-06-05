@@ -42,6 +42,11 @@ export default function Projects() {
                     </Link>
                 )
             })}
+            <Link to='/add'>
+                <div style={{ textDecoration: 'none', cursor: 'pointer', borderColor: 'red', borderWidth: 1, borderStyle: 'double', width: 300, padding: 10, color: 'black', margin: 10}}>
+                    <p style={{height: '100%', textAlign: 'center', fontSize: 30}}>+</p>
+                </div>
+            </Link>
         </div>
         </>
     )
