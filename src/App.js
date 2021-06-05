@@ -10,6 +10,7 @@ import Iterations from './Views/Iterations/Iterations'
 import StageTime from './Views/StageTime/StageTime'
 import TaskTime from './Views/TaskTime/TaskTime'
 import Links from './Views/AvailableLinks/AvailableLinks'
+import Report from './Views/Report/Report'
 import './App.css';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Route>
         </Switch> : 
           <Switch>
+          <Route path='/projects/:id/report'>
+            <Report />
+          </Route>
           <Route path='/projects/:id/links'>
             <Links />
           </Route>
@@ -49,7 +53,7 @@ function App() {
           <Route path="/projects/:id">
             <Statistics />
           </Route>
-          <Route path="/projects">
+          <Route path="/">
             <Projects />
           </Route>
         </Switch>}

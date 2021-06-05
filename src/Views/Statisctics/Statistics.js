@@ -8,6 +8,7 @@ export default function Statistics(){
     const { id } = useParams()
     
     return(
+        <>
         <div style={{padding: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', marginTop: 60}}>
             <Exit />
             <Link to={`/projects/${id}/changes`}>
@@ -46,5 +47,11 @@ export default function Statistics(){
                 </div>
             </Link>
         </div>
+        <Link to={`/projects/${id}/report`}>
+            <div style={{color: 'black', borderWidth: 1, borderColor: 'red', borderStyle: 'double', width: 300, height: 80, padding: 5, textAlign: 'center', margin: 10, marginLeft: 60}}>
+                <p>Bug report</p>
+            </div>
+        </Link>
+        </>
     )
 }

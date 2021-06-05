@@ -21,7 +21,7 @@ export default function Login() {
         .then(response => {
             localStorage.setItem('user_id', response.data.id)
             localStorage.setItem('isManager', response.data.ismanager)
-            history.push('/projects')
+            history.push('/')
             window.location.reload()
         })
         .catch(err => {

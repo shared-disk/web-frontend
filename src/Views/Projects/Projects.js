@@ -27,11 +27,14 @@ export default function Projects() {
     }, [])
 
     return(
-        <div style={{padding: 20}}>
+        <>
+        <Exit />
+        <div style={{padding: 20, marginTop: 80}}>
+            
             {projects.map(item => {
                 return(
                     <Link to={`/projects/${item.id}`}>
-                        <div style={{borderColor: 'red', borderWidth: 1, borderStyle: 'double', width: 300, padding: 10, color: 'black',}}>
+                        <div style={{borderColor: 'red', borderWidth: 1, borderStyle: 'double', width: 300, padding: 10, color: 'black', margin: 10}}>
                             <h3 style={{marginTop: 5, marginBottom: 5, textDecoration: 'none'}}>{item.name}</h3>
                             <p>Менеджер: {item.manager}</p>
                             <p>Клиент: {item.customer}</p>
@@ -40,5 +43,6 @@ export default function Projects() {
                 )
             })}
         </div>
+        </>
     )
 }
