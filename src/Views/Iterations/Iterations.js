@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Back from '../../Components/Back/Back'
+import Exit from '../../Components/Exit/Exit'
 import { useParams } from 'react-router';
 
 
@@ -23,8 +24,10 @@ export default function Iterations() {
     }, [])
 
     return(
-        <div>
+        <div style={{paddingTop: 80}}>
+            <Exit />
             <Back />
+            <h2 style={{marginLeft: 20}}>Статистика о текущей итерации проекта</h2>
             {Object.keys(iterations).map(item => {
                 if(iterations[item] !== null)
                 return(

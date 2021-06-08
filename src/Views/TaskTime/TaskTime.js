@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Back from '../../Components/Back/Back'
+import Exit from '../../Components/Exit/Exit'
 import { useParams } from 'react-router';
 import {
     Chart,
@@ -117,8 +118,10 @@ export default function StageTime() {
     }, [])
 
     return(
-        <div style={{ width:400, height: 400, alignSelf: 'center'}}>
+        <div style={{ width:400, height: 400, alignSelf: 'center', paddingTop: 80}}>
+            <Exit />
             <Back />
+            <h2 style={{marginLeft: 20}}>Время, затраченное на задачи</h2>
             {Object.keys(times).map(item => {
                 if (times[item] !== null){
                     return(

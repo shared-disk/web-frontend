@@ -1,4 +1,9 @@
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 import Login from './Views/Login/Login'
 import Register from './Views/Register/Register'
 import Projects from './Views/Projects/Projects'
@@ -16,6 +21,7 @@ import './App.css';
 
 function App() {
   return (
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
     <Router>
       {localStorage.getItem('user_id') === null ?
         <Switch>
@@ -62,6 +68,7 @@ function App() {
           </Route>
         </Switch>}
     </Router>
+    </MuiPickersUtilsProvider>
   );
 }
 

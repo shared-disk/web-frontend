@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Back from '../../Components/Back/Back'
+import Exit from '../../Components/Exit/Exit'
 import { useParams } from 'react-router';
 
 
@@ -23,8 +24,10 @@ export default function UsedSpace() {
     }, [])
 
     return(
-        <div>
+        <div style={{paddingTop: 80}}>
+            <Exit />
             <Back />
+            <h2 style={{marginLeft: 20}}>Статистика использованного пространства</h2>
             {Object.keys(usedSpace).map(item => {
                 if(usedSpace[item] !== null)
                 return(
