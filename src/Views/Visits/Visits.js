@@ -19,6 +19,8 @@ import { useParams } from 'react-router';
 export default function Visits() {
     const [visits, setVisits] = React.useState([])
     const { id } = useParams()
+    const [firstDate, setFirstDate] = React.useState(new Date());
+    const [secondDate, setSecondDate] = React.useState(new Date());
 
     React.useEffect(() => {
         axios({
@@ -46,7 +48,8 @@ export default function Visits() {
                     format="dd/MM/yyyy"
                     margin="normal"
                     id="date-picker-inline"
-                    onChange={() => {}}
+                    value={firstDate}
+                    onChange={date => setFirstDate(date)}
                     label="От"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
@@ -58,7 +61,8 @@ export default function Visits() {
                     format="dd/MM/yyyy"
                     margin="normal"
                     id="date-picker-inline"
-                    onChange={() => {}}
+                    value={secondDate}
+                    onChange={date => setSecondDate(date)}
                     label="До"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
