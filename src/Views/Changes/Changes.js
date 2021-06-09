@@ -36,6 +36,15 @@ export default function Changes() {
         })
     }, [])
 
+    const handleFirstDateChange = (date) => {
+        setFirstDate(date);
+      };
+
+    const handleSecondDateChange = (date) => {
+        setSecondDate(date);
+      };
+
+
     return(
         <div style={{paddingTop: 80}}>
             <Exit />
@@ -50,7 +59,7 @@ export default function Changes() {
                     margin="normal"
                     id="date-picker-inline"
                     value={firstDate}
-                    onChange={date => setFirstDate(date)}
+                    onChange={handleFirstDateChange}
                     label="От"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
@@ -63,7 +72,7 @@ export default function Changes() {
                     margin="normal"
                     id="date-picker-inline"
                     value={secondDate}
-                    onChange={date => setSecondDate(date)}
+                    onChange={handleSecondDateChange}
                     label="До"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
