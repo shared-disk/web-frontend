@@ -46,6 +46,7 @@ export default function Visits() {
                     format="dd/MM/yyyy"
                     margin="normal"
                     id="date-picker-inline"
+                    onChange={() => {}}
                     label="От"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
@@ -57,6 +58,7 @@ export default function Visits() {
                     format="dd/MM/yyyy"
                     margin="normal"
                     id="date-picker-inline"
+                    onChange={() => {}}
                     label="До"
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
