@@ -78,7 +78,6 @@ export default function Visits() {
                         <TableCell align="center">{row[1]}</TableCell>
                         <TableCell align="center">{row[2]}</TableCell>
                         <TableCell align="center">{row[3]}</TableCell>
-                        <TableCell align="center">{row[4]}</TableCell>
                     </TableRow>
                 ))}
                 </TableBody>
